@@ -240,8 +240,6 @@ The mean represents the average Electric Range of the vehicles in the dataset.
 <img width="941" height="611" alt="Screenshot 2026-08-27 142524" src="https://github.com/user-attachments/assets/7bcae3fb-daab-49b1-ad83-e14693c45533" />
 
 
-
-
 ### 🔍 Insight
 
 The mean Electric Range is approximately **37.40 miles**, representing the average electric driving range across the vehicles in the dataset. Since the dataset contains a large number of low or zero-range observations along with some higher-range vehicles, the mean is influenced by the overall distribution of the data. Therefore, the mean should be interpreted together with the median and mode to obtain a clearer understanding of the Electric Range distribution.
