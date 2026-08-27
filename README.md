@@ -237,7 +237,7 @@ The mean represents the average Electric Range of the vehicles in the dataset.
 
 ### 📊 Visualization
 
-<img width="941" height="611" alt="Mean Electric Range" src="https://github.com/user-attachments/assets/XXXX" />
+<img width="941" height="611" alt="Mean Electric Range" src="https://github.com/user-attachments/assets/84c1a1ea-cc85-46fe-be03-9ce2969be611" />
 
 
 ### 🔍 Insight
