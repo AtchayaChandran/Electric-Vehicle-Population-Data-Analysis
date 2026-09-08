@@ -330,7 +330,6 @@ The dataset used for this project is the **Electric Vehicle Population Data** fr
 - Statistical Analysis
 - Data Visualization
 
--
 
 ## 📓 Google Colab Notebook
 
