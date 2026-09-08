@@ -1,245 +1,331 @@
-# 🚗 Electric Vehicle Population Data Analysis Using Python
+# ⚡ Electric Vehicle Population Data Analysis Using Python
+
+> An end-to-end data analysis project exploring Electric Vehicle Population data using Python, Pandas, NumPy, Matplotlib, and Seaborn.
 
 ## 📌 Project Overview
 
-This project analyzes Electric Vehicle (EV) population data using Python to understand EV adoption patterns, electric range, vehicle types, manufacturers, model years, CAFV eligibility, and geographic distribution.
+The **Electric Vehicle Population Data Analysis Using Python** project focuses on analyzing electric vehicle registration data from **Washington State, USA**.
 
-The project follows a complete data analytics workflow, starting from data cleaning and preprocessing to Exploratory Data Analysis (EDA), statistical analysis, and data visualization.
+The project explores key characteristics of electric vehicles, including **Electric Vehicle Type, Manufacturer, Model Year, Electric Range, County, and CAFV Eligibility**.
 
-The main objective is to transform raw Electric Vehicle data into meaningful insights by identifying key patterns, trends, distributions, and relationships within the dataset.
+The analysis follows a complete data analytics workflow, starting from **data inspection and data cleaning**, followed by **data transformation, feature engineering, statistical analysis, exploratory data analysis, visualization, bivariate analysis, and multivariate analysis**.
 
-## 🎯 Business Problem
+The main objective is to identify meaningful patterns and insights from the dataset that can support **electric vehicle market analysis, charging infrastructure planning, and data-driven decision-making**.
 
-Electric Vehicle population data contains valuable information about vehicle characteristics and EV adoption. However, raw data alone does not clearly provide insights into:
+## 🎯 Project Objectives
 
-- Which type of Electric Vehicles are most common?
-- How is Electric Range distributed across vehicles?
-- Which manufacturers have the highest number of registered EVs?
-- How does Electric Range vary across different Model Years?
-- How are vehicles distributed across CAFV eligibility categories?
-- Which counties have higher EV adoption?
-- What relationships exist between EV Type, Electric Range, Model Year, and Manufacturers?
+The main objective of this project is to analyze the **Electric Vehicle Population Data** using Python and identify meaningful patterns in electric vehicle adoption.
 
-This project addresses these questions using Python-based data analysis, statistical methods, and data visualization techniques to identify meaningful patterns and insights from the dataset.
+### Key Objectives
 
-## 🚀 Project Objectives
+- Analyze the distribution of **Electric Vehicle Types**.
+- Identify the **top EV manufacturers**.
+- Study EV distribution across **Model Years**.
+- Analyze **Electric Range**.
+- Identify counties with the **highest EV population**.
+- Analyze **CAFV Eligibility**.
+- Compare EV characteristics using **statistical analysis and visualization**.
+- Generate insights to support **EV infrastructure planning and data-driven decision-making**.
 
-- Analyze the distribution of Electric Vehicles in the dataset.
-- Understand the distribution and characteristics of Electric Range.
-- Compare Battery Electric Vehicles (BEVs) and Plug-in Hybrid Electric Vehicles (PHEVs).
-- Identify the top Electric Vehicle manufacturers based on vehicle count.
-- Analyze the distribution of Electric Vehicles across different Model Years.
-- Analyze the distribution of vehicles based on CAFV Eligibility.
-- Identify counties with higher Electric Vehicle population.
-- Perform statistical analysis using Mean, Median, Mode, Variance, Standard Deviation, Skewness, and Kurtosis.
-- Perform Univariate, Bivariate, and Multivariate Analysis using appropriate visualizations.
-- Derive meaningful insights and identify important patterns and relationships from the analysis.
+## 📊 Dataset Information
 
-## 📂 Dataset Information
-
-The dataset used in this project contains information about registered Electric Vehicles and their characteristics.
-
-### Dataset Details
+The dataset used in this project is the **Electric Vehicle Population Data**, obtained from **Data.gov**.
 
 | Feature | Details |
 |---|---|
-| Dataset | Electric Vehicle Population Data |
-| File Type | Excel |
-| Data Type | Vehicle Registration Data |
-| Analysis Focus | Electric Vehicle Population and Characteristics |
+| **Dataset** | Electric Vehicle Population Data |
+| **Source** | Data.gov |
+| **Location** | Washington State, USA |
+| **Records** | 289,564 |
+| **Columns** | 16 |
+| **Domain** | Electric Vehicles / Transportation |
 
-### Key Features
+### Key Variables
 
-| Feature | Description |
-|---|---|
-| Electric Vehicle Type | Type of Electric Vehicle such as BEV and PHEV |
-| Electric Range | Electric driving range of the vehicle in miles |
-| Model Year | Model year of the vehicle |
-| Make | Manufacturer of the vehicle |
-| County | County where the vehicle is registered |
-| CAFV Eligibility | Clean Alternative Fuel Vehicle eligibility category |
+- Electric Vehicle Type
+- Make
+- Model
+- Model Year
+- Electric Range
+- County
+- City
+- CAFV Eligibility
 
-The dataset was used to perform data cleaning, exploratory analysis, statistical analysis, and visualization to identify meaningful patterns in Electric Vehicle adoption.
+### 🔗 Data Source
 
-## 🛠️ Tech Stack
+[Electric Vehicle Population Data – Data.gov](https://catalog.data.gov/dataset/electric-vehicle-population-data)
+
+## 🛠️ Tools & Technologies
+
+### Programming Language
+- **Python**
+
+### Environment
+- **Google Colab**
+
+### Libraries
+- **Pandas** – Data cleaning and analysis
+- **NumPy** – Numerical operations
+- **Matplotlib** – Data visualization
+- **Seaborn** – Statistical visualization
+
+### Analysis Techniques
+- Data Cleaning
+- Data Transformation
+- Feature Engineering
+- Statistical Analysis
+- Univariate Analysis
+- Bivariate Analysis
+- Multivariate Analysis
+- Data Visualization
+
+## 🔄 Project Workflow
+
+The project follows a structured data analysis workflow:
+
+**Data Collection → Data Cleaning → Data Transformation → Feature Engineering → Statistical Analysis → Data Visualization → Univariate Analysis → Bivariate Analysis → Multivariate Analysis → Insights & Recommendations**
+
+## 🔍 Data Loading & Initial Inspection
+
+The dataset was loaded using **Pandas** and initially inspected to understand its structure, data types, and overall quality.
+
+The initial inspection included:
+
+- Dataset shape and column information
+- Data types
+- Missing values
+- Duplicate records
+- Descriptive statistics
+
+## 🧹 Data Cleaning
+
+The dataset was cleaned and prepared before performing the analysis.
+
+The main data cleaning steps included:
+
+- Checking for missing values
+- Checking for duplicate records
+- Handling missing values where required
+- Removing unnecessary columns
+- Ensuring the data was suitable for further analysis
+
+After cleaning, the dataset was prepared for **data transformation, statistical analysis, and visualization**.
+
+## 🔄 Data Transformation & Feature Engineering
+
+After cleaning the dataset, additional transformations were performed to make the data more useful for analysis.
+
+### Data Transformation
+
+A new **Vehicle Age** feature was created using the Model Year to understand the age of the registered vehicles.
+
+### Feature Engineering
+
+A **Range Category** feature was created by grouping vehicles based on their Electric Range:
+
+- 0–100 miles
+- 101–200 miles
+- 201–300 miles
+- 301–400 miles
+- 400+ miles
+
+These derived features were used to support further **statistical analysis and visualization**.
+
+## 📐 Statistical Analysis
+
+Statistical analysis was performed to understand the **central tendency and variability** of important numerical variables in the dataset.
+
+### Measures of Central Tendency
+
+The following measures were calculated:
+
+- **Mean**
+- **Median**
+- **Mode**
+
+The analysis was performed for:
+
+- Electric Range
+  <img width="1009" height="618" alt="Screenshot 2026-09-08 180020" src="https://github.com/user-attachments/assets/e475cc6e-8f6e-4a20-8936-3119e01a5ae1" />
+
+- Model Year
+  <img width="1001" height="617" alt="Screenshot 2026-09-08 180059" src="https://github.com/user-attachments/assets/fec7a7e9-682b-4fd0-b811-0051d4be9e8f" />
+
+- Vehicle Age
+  <img width="1003" height="620" alt="Screenshot 2026-09-08 180126" src="https://github.com/user-attachments/assets/322c37cf-d33c-4116-aea8-e2e800c5191e" />
+
+
+### Measures of Dispersion
+
+To understand the variability in the data, the following were analyzed:
+
+- **Variance**
+<img width="999" height="614" alt="Screenshot 2026-09-08 200759" src="https://github.com/user-attachments/assets/13095db3-8f1f-405a-ba41-d45fd71c5f2c" />
+<img width="993" height="607" alt="Screenshot 2026-09-08 200817" src="https://github.com/user-attachments/assets/067f443b-e2f2-46ec-ac1c-a6d38f716380" />
+<img width="994" height="610" alt="Screenshot 2026-09-08 200835" src="https://github.com/user-attachments/assets/0e3435fa-2f12-467d-af17-5aa1c222923d" />
+
+
+- **Standard Deviation**
+  <img width="1254" height="619" alt="Screenshot 2026-09-08 202132" src="https://github.com/user-attachments/assets/1047b0c5-dc87-498b-a031-ad982ece96d7" />
+  <img width="1252" height="611" alt="Screenshot 2026-09-08 202156" src="https://github.com/user-attachments/assets/b4a926bf-6b2a-4027-a59a-bff45bba929c" />
+  <img width="1248" height="615" alt="Screenshot 2026-09-08 202209" src="https://github.com/user-attachments/assets/87450676-ec19-4a61-9654-8d38c14bf34f" />
+
+
+The results showed that **Electric Range has higher variability**, while Model Year and Vehicle Age are more concentrated around recent values.
+
+## 📊 Univariate Analysis
+
+Univariate analysis was performed to understand the distribution of individual variables in the dataset.
+
+The following variables were analyzed:
+
+- **Electric Range**
+  <img width="1110" height="697" alt="Screenshot 2026-09-08 204647" src="https://github.com/user-attachments/assets/58da06a8-a4ae-463c-a861-1582540261e4" />
+
+- **Electric Vehicle Type**
+  <img width="922" height="686" alt="Screenshot 2026-09-08 204850" src="https://github.com/user-attachments/assets/c5eb80bb-4704-47d1-9f32-0114cc439157" />
+
+- **Top 10 Manufacturers**
+  <img width="1166" height="699" alt="Screenshot 2026-09-08 211118" src="https://github.com/user-attachments/assets/70bb6193-30fc-499d-b83d-bf518f6a71bd" />
+- **Model Year**
+  <img width="1115" height="696" alt="Screenshot 2026-09-08 211257" src="https://github.com/user-attachments/assets/ac4ff891-bd13-4af2-98d8-8b5358555c1b" />
+- **CAFV Eligibility**
+  <img width="1585" height="687" alt="Screenshot 2026-09-08 211637" src="https://github.com/user-attachments/assets/52584386-6c15-4d12-9a0a-3225a8d71a75" />
+The analysis used appropriate charts and visualizations to identify the most common categories, distributions, and patterns within each variable.
+
+## 🔗 Bivariate Analysis
+
+Bivariate analysis was performed to understand the relationship between two variables and identify meaningful patterns in the dataset.
+
+The following relationships were analyzed:
+
+- **EV Type vs Electric Range**
+  <img width="1076" height="697" alt="Screenshot 2026-09-08 211924" src="https://github.com/user-attachments/assets/0701015e-f777-4cec-b245-f3ac127c337e" />
+
+- **Model Year vs Electric Range**
+  <img width="1084" height="696" alt="Screenshot 2026-09-08 213416" src="https://github.com/user-attachments/assets/9bc9f408-1052-4270-8851-7e6acb1c94c6" />
+
+- **Manufacturer vs EV Type**
+  <img width="1366" height="699" alt="Screenshot 2026-09-08 213727" src="https://github.com/user-attachments/assets/66efcc6f-9269-4aac-a286-0a1d3a3bd383" />
+
+- **County vs EV Population**
+<img width="1142" height="691" alt="Screenshot 2026-09-08 213920" src="https://github.com/user-attachments/assets/8c696686-5dc6-40ed-bd55-e0604e99d6ee" />
+
+These relationships were explored using suitable visualizations such as **box plots, scatter plots, and comparison charts**.
+
+## 🔬 Multivariate Analysis
+
+Multivariate analysis was performed to understand patterns involving **multiple variables simultaneously**.
+
+The following relationships were analyzed:
+
+- **Model Year + Electric Range + EV Type**
+  <img width="1077" height="696" alt="Screenshot 2026-09-08 214607" src="https://github.com/user-attachments/assets/e08a1a7a-e0b2-4e0c-ac8a-b2d480bc343b" />
+
+- **Manufacturer + Electric Range + EV Type**
+  <img width="1273" height="885" alt="Screenshot 2026-09-08 214633" src="https://github.com/user-attachments/assets/5ff4a103-7bc7-4c8d-b1ee-e156a4bce883" />
+
+- **County + EV Type + EV Population**
+  <img width="1336" height="800" alt="Screenshot 2026-09-08 214653" src="https://github.com/user-attachments/assets/77f651d6-ea6e-42ce-9ad3-6649667418f2" />
+
+
+These visualizations help provide a deeper understanding of how vehicle characteristics vary across different **vehicle types, manufacturers, model years, and locations**.
+
+## 💡 Key Insights & Findings
+
+The analysis revealed several important patterns in the Electric Vehicle Population dataset:
+
+- 🔋 **BEVs dominate the dataset**, with significantly more registrations than PHEVs.
+- 🏭 **Tesla has the highest representation** among the manufacturers analyzed.
+- 📅 **Recent Model Years are strongly represented**, indicating a large presence of newer EVs.
+- 📈 **Electric Range shows high variability** across vehicles.
+- 📍 **EV adoption is geographically concentrated**, with King County having the highest EV population.
+- 🔄 **Electric Range varies across EV Types, Manufacturers, and Model Years**, highlighting differences in vehicle characteristics.
+- 🌱 The results provide useful insights for **EV market analysis and charging infrastructure planning**.
+
+## 🧠 Recommendations / Decision Support
+
+Based on the analysis, the following recommendations can be considered:
+
+- 🔋 **Prioritize BEV-focused charging infrastructure** due to the higher representation of BEVs in the dataset.
+- 📍 **Focus infrastructure planning on high-EV counties**, particularly areas with higher EV populations.
+- ⚡ **Consider Electric Range differences** when planning charging facilities and understanding user requirements.
+- 🏭 **Consider manufacturer and EV type patterns** for EV market and technology analysis.
+- 📅 **Account for the growing presence of newer EV models** when planning future EV infrastructure.
+
+## 🚀 Future Enhancements
+
+This project can be further extended with the following improvements:
+
+- 📊 **Interactive Dashboard** – Build an interactive dashboard using Power BI or Streamlit.
+- 🤖 **Predictive Analysis** – Apply machine learning techniques to predict future EV adoption trends.
+- 🗺️ **Geographical Analysis** – Use maps and heatmaps to identify EV adoption hotspots.
+- 📐 **Advanced Statistical Analysis** – Apply additional statistical tests to explore relationships between variables.
+- 📈 **Time-Series Analysis** – Analyze EV adoption trends across different time periods.
+
+## 📁 Repository Structure
+
+```text
+Electric-Vehicle-Population-Data-Analysis/
+│
+├── README.md
+├── Electric_Vehicle_Population_Data_Analysis_Using_Python.ipynb
+├── Electric Vehicle Population Data.csv
+│
+├── assets/
+│   ├── 05-statistical-analysis.png
+│   ├── 07-electric-range-distribution.png
+│   ├── 08-ev-type-distribution.png
+│   ├── 09-top-manufacturers.png
+│   ├── 10-model-year-distribution.png
+│   ├── 11-cafv-eligibility.png
+│   ├── 12-ev-type-vs-range.png
+│   ├── 13-model-year-vs-range.png
+│   ├── 14-manufacturer-vs-ev-type.png
+│   ├── 15-top-counties.png
+│   ├── 16-multivariate-model-year-range-type.png
+│   ├── 17-multivariate-manufacturer-range-type.png
+│   └── 18-multivariate-county-ev-type.png
+│
+└── requirements.txt
+
+## 🏆 Conclusion
+
+This project provides an end-to-end analysis of the **Electric Vehicle Population Data** using Python.
+
+The analysis explored EV types, manufacturers, model years, electric range, CAFV eligibility, and county-level EV distribution through statistical analysis and data visualization.
+
+The findings highlight the strong presence of **BEVs, newer EV models, major manufacturers, and geographically concentrated EV adoption**.
+
+Overall, the project demonstrates how **Python and data analysis techniques** can be used to transform real-world data into meaningful insights for **EV market understanding and infrastructure planning**.
+
+
+## 📚 Data Source
+
+The dataset used for this project is the **Electric Vehicle Population Data** from **Data.gov**.
+
+**Source:** Data.gov  
+**Dataset:** Electric Vehicle Population Data  
+**Location:** Washington State, USA
+
+🔗 [View Dataset on Data.gov](https://catalog.data.gov/dataset/electric-vehicle-population-data)
+
+
+## 👩‍💻 Author
+
+### Atchaya Chandran
+
+**Project:** Electric Vehicle Population Data Analysis Using Python
+
+### Skills Demonstrated
 
 - Python
 - Pandas
 - NumPy
 - Matplotlib
 - Seaborn
-- Google Colab
-- GitHub
-- Markdown
-
-## 🔄 Project Workflow
-
-```text
-Data Collection
-      ↓
-Data Understanding
-      ↓
-Data Cleaning & Preprocessing
-      ↓
-Exploratory Data Analysis (EDA)
-      ↓
-Statistical Analysis
-      ↓
-Univariate Analysis
-      ↓
-Bivariate Analysis
-      ↓
-Multivariate Analysis
-      ↓
-Insights & Interpretation
-      ↓
-Conclusion
-
-## 🧹 Data Cleaning & Preprocessing
-
-Data cleaning and preprocessing were performed to improve data quality and prepare the dataset for further analysis.
-
-The following steps were performed:
-
-- Inspected the dataset structure and dimensions.
-- Checked column names and data types.
-- Identified missing values across the dataset.
-- Checked for duplicate records.
-- Handled missing values in categorical columns using appropriate imputation techniques.
-- Verified numerical and categorical variables before analysis.
-- Prepared the cleaned dataset for Exploratory Data Analysis and visualization.
-
-These preprocessing steps helped ensure that the dataset was suitable for statistical analysis and data visualization.
-
-## 📊 Exploratory Data Analysis (EDA)
-
-Exploratory Data Analysis was performed to understand the structure, distribution, and key characteristics of the Electric Vehicle dataset.
-
-The analysis focused on the following areas:
-
-- Dataset structure and dimensions
-- Data types and variable identification
-- Missing value analysis
-- Duplicate record analysis
-- Descriptive statistics
-- Electric Vehicle Type distribution
-- Electric Range distribution
-- Top EV manufacturers
-- Model Year distribution
-- CAFV Eligibility distribution
-- County-level EV population
-
-EDA helped identify important patterns and characteristics in the dataset and provided a foundation for further statistical analysis and visualization.
-
-## 📈 Statistical Analysis Metrics
-
-Statistical analysis was performed on the Electric Range variable to understand its central tendency, variability, and distribution shape.
-
-The following statistical measures were calculated:
-
-| Metric | Value | Interpretation |
-|---|---:|---|
-| Mean | 37.40 miles | Represents the average Electric Range of the vehicles. |
-| Median | 0 miles | Represents the middle value of the Electric Range data. |
-| Mode | 0 miles | Represents the most frequently occurring Electric Range value. |
-| Variance | 5889.14 | Measures the overall variability of Electric Range values. |
-| Standard Deviation | 76.74 miles | Indicates the typical spread of Electric Range around the mean. |
-| Skewness | 2.23 | Indicates a positively skewed Electric Range distribution. |
-| Kurtosis | 3.67 | Indicates relatively heavier tails and the presence of extreme observations. |
-
-### 📌 Key Statistical Insights
-
-- The **Mean (37.40 miles) is higher than the Median (0 miles)**, indicating that the Electric Range distribution is strongly influenced by higher-range observations.
-- The **Mode of 0 miles** shows that zero is the most frequently occurring Electric Range value.
-- The **Standard Deviation of 76.74 miles** indicates considerable variation in Electric Range across vehicles.
-- The **positive Skewness value of 2.23** indicates that the distribution has a longer tail towards higher Electric Range values.
-- The **Kurtosis value of 3.67** indicates the presence of relatively heavy tails and extreme observations.
-- Overall, the statistical measures indicate considerable variability and a positively skewed Electric Range distribution.
-
-## 📌 Mean Electric Range
-
-The mean represents the average Electric Range of the vehicles in the dataset.
-
-### Metric
-
-**Mean Electric Range: 37.40 miles**
-
-### 📊 Visualization
-
-![Mean Electric Range](## 🧹 Data Cleaning & Preprocessing
-
-Data cleaning and preprocessing were performed to improve data quality and prepare the dataset for further analysis.
-
-The following steps were performed:
-
-- Inspected the dataset structure and dimensions.
-- Checked column names and data types.
-- Identified missing values across the dataset.
-- Checked for duplicate records.
-- Handled missing values in categorical columns using appropriate imputation techniques.
-- Verified numerical and categorical variables before analysis.
-- Prepared the cleaned dataset for Exploratory Data Analysis and visualization.
-
-These preprocessing steps helped ensure that the dataset was suitable for statistical analysis and data visualization.
-
-## 📊 Exploratory Data Analysis (EDA)
-
-Exploratory Data Analysis was performed to understand the structure, distribution, and key characteristics of the Electric Vehicle dataset.
-
-The analysis focused on the following areas:
-
-- Dataset structure and dimensions
-- Data types and variable identification
-- Missing value analysis
-- Duplicate record analysis
-- Descriptive statistics
-- Electric Vehicle Type distribution
-- Electric Range distribution
-- Top EV manufacturers
-- Model Year distribution
-- CAFV Eligibility distribution
-- County-level EV population
-
-EDA helped identify important patterns and characteristics in the dataset and provided a foundation for further statistical analysis and visualization.
-
-## 📈 Statistical Analysis Metrics
-
-Statistical analysis was performed on the Electric Range variable to understand its central tendency, variability, and distribution shape.
-
-The following statistical measures were calculated:
-
-| Metric | Value | Interpretation |
-|---|---:|---|
-| Mean | 37.40 miles | Represents the average Electric Range of the vehicles. |
-| Median | 0 miles | Represents the middle value of the Electric Range data. |
-| Mode | 0 miles | Represents the most frequently occurring Electric Range value. |
-| Variance | 5889.14 | Measures the overall variability of Electric Range values. |
-| Standard Deviation | 76.74 miles | Indicates the typical spread of Electric Range around the mean. |
-| Skewness | 2.23 | Indicates a positively skewed Electric Range distribution. |
-| Kurtosis | 3.67 | Indicates relatively heavier tails and the presence of extreme observations. |
-
-### 📌 Key Statistical Insights
-
-- The **Mean (37.40 miles) is higher than the Median (0 miles)**, indicating that the Electric Range distribution is strongly influenced by higher-range observations.
-- The **Mode of 0 miles** shows that zero is the most frequently occurring Electric Range value.
-- The **Standard Deviation of 76.74 miles** indicates considerable variation in Electric Range across vehicles.
-- The **positive Skewness value of 2.23** indicates that the distribution has a longer tail towards higher Electric Range values.
-- The **Kurtosis value of 3.67** indicates the presence of relatively heavy tails and extreme observations.
-- Overall, the statistical measures indicate considerable variability and a positively skewed Electric Range distribution.
-
-## 📌 Mean Electric Range
-
-The mean represents the average Electric Range of the vehicles in the dataset.
-
-### Metric
-
-**Mean Electric Range: 37.40 miles**
-
-### 📊 Visualization
-
-<img width="941" height="611" alt="Mean Electric Range" src="https://github.com/user-attachments/assets/84c1a1ea-cc85-46fe-be03-9ce2969be611" />
-
-
-### 🔍 Insight
-
-The mean Electric Range is approximately **37.40 miles**, representing the average electric driving range across the vehicles in the dataset. Since the dataset contains a large number of low or zero-range observations along with some higher-range vehicles, the mean is influenced by the overall distribution of the data. Therefore, the mean should be interpreted together with the median and mode to obtain a clearer understanding of the Electric Range distribution.
+- Data Cleaning
+- Data Analysis
+- Exploratory Data Analysis (EDA)
+- Statistical Analysis
+- Data Visualization
