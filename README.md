@@ -329,3 +329,10 @@ The dataset used for this project is the **Electric Vehicle Population Data** fr
 - Exploratory Data Analysis (EDA)
 - Statistical Analysis
 - Data Visualization
+
+## 📓 Google Colab Notebook
+
+The complete Python analysis and visualizations are available in the Google Colab notebook.
+
+🔗 **[Open the Project in Google Colab](https://colab.research.google.com/drive/1kXHWte1I9nrKJQNyXIEBCOLWz1P8hP6X?usp=sharing)**
+
